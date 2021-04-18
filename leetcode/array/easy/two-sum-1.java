@@ -1,7 +1,12 @@
 /*
-Possible input
-- empty array
-- negative numbers
+
+    Attempt 1
+
+    Source: https://leetcode.com/problems/two-sum/
+
+    Possible input
+    - empty array
+    - negative numbers
 
 */
 class Solution {
