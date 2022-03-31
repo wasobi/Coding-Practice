@@ -11,7 +11,6 @@
 */
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        solution 1
         int size = nums.length;
         // initialize the indices array
         int [] indices = {-1,-1};
