@@ -33,3 +33,15 @@
 /*
 *   DISTANCE EQUATION: sqrt((x1 - x2)^2 + (y1 - y2)^2)
 */
+
+class Solution {
+    public int[] getPointsInCircles (int** points, int*** queries) {
+
+        int[] validPoints = new int [queries.length];
+
+        // solution goes here
+
+        return validPoints;
+    }
+
+}
