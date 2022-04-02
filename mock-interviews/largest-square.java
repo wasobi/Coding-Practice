@@ -22,20 +22,26 @@
     - the dimensions of each rectangle will always be a pair of positive integers
 
     Soulution:
-    - TODO
+    - iterate through the array of rectangles and find the maximum square that can be made from each rectangles
+    --> determine if the length or the width is larger
+    ----> if the length is longer than the width, then the width is largest value for length and width of a square that can be made for the ith rectangle
+    ----> otherwise, the length is the largest value for length and width of a square that can be made for the ith rectangle
+    --> if the length of the square is larger than the maxLen, then reset the maxLen and the counter
+    --> if the length of the square is equal to the maxLen, increment the counter
+    - return the number of squares of size maxLen can be created
 
     Analysis:
-    Time complexity - O ()
-    Space complexity - O ()
+    Time complexity - O (n) because the solution uses a for loop and has to iterate over n elements
+    Space complexity - O (1) because only variables were created in memory and they can be accessed in constant time
 */
 
 class Solution {
-    public int searchInsert(int** rectangles) {
+    public int getMaxLength(int** rectangles) {
         int count = 0;
         int maxLen;
         for (int i = 0; i < rectangles.length - 1; i++) {
             int tempLen = 0;
-            if (rectangles[i][0] > rectangles[i][1]) {
+            if (rectangles[i][0] < rectangles[i][1]) {
                 tempLen = rectangles[i][0];
             }
             else {
