@@ -26,8 +26,8 @@
     - TODO
 
     Analysis:
-    Time complexity - O ()
-    Space complexity - O ()
+    Time complexity - O (n^2) because we are iterating over the elements j times for n elements in the queries array
+    Space complexity - O (n) because there was an array created to store the total number of points in each circle
 */
 
 /*
@@ -39,7 +39,25 @@ class Solution {
 
         int[] validPoints = new int [queries.length];
 
-        // solution goes here
+        for (int i = 0; i < queries.length; i++) {
+            int count = 0;
+            int circleX = queries[i][0];
+            int circleY = queries[i][1];
+            int radius = queries[i][2];
+
+            for (int j = 0; j < points.length; j++) {
+                int pointX = points[j][0];
+                int pointY = points[j][1];
+                int distance = sqrt(((pointX - circleX)^2) + ((pointY - circleY)^2));
+
+                if (distance <= radius) {
+                    count++;
+                }
+
+            }
+
+            validPoints[i] = count;
+        }
 
         return validPoints;
     }
