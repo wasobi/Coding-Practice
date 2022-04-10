@@ -5,20 +5,25 @@
     Solution: https://www.pramp.com/question/15oxrQx6LjtQj9JK9XqA
 
     Possible input:
-    - 
+    - k-ary tree with n children
+    - empty tree
+    - k-ary tree with equivalent sales paths
 
     Possible output:
-    -
+    - integer greater than 0
 
     Assumptions:
-    -
+    - All nodes in a path will contain an integer between 0 and infinity
 
     Soulution:
-    -
+    - traverse each path to the furthest child and calculate the total sales path
+    - the first sales path found with be the current minPath
+    --> if we find a sales path that is less than the minPath, update the minPath
+    - return the minPath
 
     Analysis:
-    Time complexity - O ()
-    Space complexity - O ()
+    Time complexity - O (n^2)
+    Space complexity - O (1)
 */
 
 import java.io.*;
@@ -56,7 +61,7 @@ class Solution {
             cheapestCost = tempCost;
           }
         }
-        parent =
+        // parent =
       }
     }
   }
