@@ -1,7 +1,7 @@
 /*
     Attempt 1
 
-    Source: https://leetcode.com/problems/reverse-string/submissions/
+    Source: https://leetcode.com/problems/reverse-string/
 
     Possible input:
     - array of characters
